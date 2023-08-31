@@ -1,12 +1,14 @@
 package terminal
 
 
-Capabilities :: struct {
+Info :: struct {
+	width, height: int,
 	is_tty: bool,
-	color: Color_Capabilities,
+	supports_ansi_escapes: bool,
+	color: Color_Mode,
 }
 
-Color_Capabilities :: enum {
+Color_Mode :: enum u8 {
 	None,
 	Color_16,
 	Color_256,
